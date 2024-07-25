@@ -1,37 +1,131 @@
-"use client"
-import React from 'react'
-import { useState } from 'react';
-import Typography from '@mui/material/Typography';
-import {Grid} from '@mui/material'
+// "use client"
+// import React from 'react'
+// import { useState } from 'react';
+// import Typography from '@mui/material/Typography';
+// import {Grid} from '@mui/material'
+// import Image from 'next/image';
+// import { useRouter } from 'next/navigation';
+// import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+
+// export default function VideoCard({course}) {
+//     const [hover, setHover] = useState(false)
+//     const router = useRouter()
+//     const { title, thumbnails = {}, resourceId = {} } = course.snippet;
+//     const { medium } = thumbnails;
+
+//     const handleVideoClick = () => {
+//       router.push(`/ui-components/video/${resourceId.videoId}`);
+//     };
+//   return (
+//     <Grid
+//             item
+//             xs={12}
+//             sm={6}
+//             lg={4}
+//             sx={{
+//             position: "relative",
+//             overflow: "hidden",
+//             cursor: "pointer",
+//             '&:hover .hover-icon': {
+//                 display: 'flex',
+//             },
+//             }}
+//             onMouseEnter={() => setHover(true)}
+//             onMouseLeave={() => setHover(false)}
+//             onClick = {handleVideoClick}
+//     >
+//         <PlayArrowIcon
+//         className="hover-icon"
+//         sx={{
+//           position: "absolute",
+//           top: "1rem",
+//           left: "1rem",
+//           right:"1rem",
+//           backgroundColor: "rgba(0, 0, 0, 0.5)",
+//           display: hover ? 'flex' : 'none',
+//           alignItems: "center",
+//           justifyContent: "center",
+//           fontSize: "4rem",
+//           color: "white",
+//           padding: "1rem",
+//           width:"100%",
+//           height:"11.2rem"
+//         }} />
+
+//         <Image
+//           src={medium.url}
+//           alt="img"
+//           height={medium.height}
+//           width={medium.width}
+//           style={{borderRadius: "8px", width: "100%", objectFit:"cover" }}
+//         />
+//         <Typography variant="h4">{title}</Typography>
+// </Grid>
+//   )
+// }
+
+// src/app/(DashboardLayout)/components/videocard/VideoCard.tsx
+import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 
-export default function VideoCard({course}) {
-    const [hover, setHover] = useState(false)
+interface Course {
+  snippet: {
+    title: string;
+    thumbnails: {
+      medium: {
+        url: string;
+        height: number;
+        width: number;
+      };
+    };
+    resourceId: {
+      videoId: string;
+    };
+  };
+}
+
+interface VideoCardProps {
+  course: Course;
+}
+
+const VideoCard: React.FC<VideoCardProps> = ({ course }) => {
+  const [hover, setHover] = useState(false);
+  const router = useRouter();
+  const { title, thumbnails = {}, resourceId = {} } = course.snippet;
+  const { medium } = thumbnails;
+
+  const handleVideoClick = () => {
+    router.push(`/ui-components/video/${resourceId.videoId}`);
+  };
+
   return (
     <Grid
-            item
-            xs={12}
-            sm={6}
-            lg={4}
-            sx={{
-            position: "relative",
-            overflow: "hidden",
-            cursor: "pointer",
-            '&:hover .hover-icon': {
-                display: 'flex',
-            },
-            }}
-            onMouseEnter={() => setHover(true)}
-            onMouseLeave={() => setHover(false)}
+      item
+      xs={12}
+      sm={6}
+      lg={4}
+      sx={{
+        position: "relative",
+        overflow: "hidden",
+        cursor: "pointer",
+        '&:hover .hover-icon': {
+          display: 'flex',
+        },
+      }}
+      onClick={handleVideoClick}
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
     >
-        <PlayArrowIcon
+      <PlayArrowIcon
         className="hover-icon"
         sx={{
           position: "absolute",
           top: "1rem",
           left: "1rem",
-          right:"1rem",
+          right: "1rem",
           backgroundColor: "rgba(0, 0, 0, 0.5)",
           display: hover ? 'flex' : 'none',
           alignItems: "center",
@@ -39,16 +133,20 @@ export default function VideoCard({course}) {
           fontSize: "4rem",
           color: "white",
           padding: "1rem",
-          width:"100%",
-          height:"15.6rem"
-        }} />
+          width: "100%",
+          height: "11.2rem",
+        }}
+      />
+      <Image
+        src={medium.url}
+        alt="img"
+        height={medium.height}
+        width={medium.width}
+        style={{ borderRadius: "8px", width: "100%", objectFit: "cover" }}
+      />
+      <Typography variant="h4">{title}</Typography>
+    </Grid>
+  );
+};
 
-        <Image
-          src={course.img}
-          alt="img"
-          style={{ height: "250px", borderRadius: "8px", width: "100%", objectFit:"cover" }}
-        />
-        <Typography variant="h4">{course.title}</Typography>
-</Grid>
-  )
-}
+export default VideoCard;

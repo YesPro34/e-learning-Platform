@@ -8,9 +8,12 @@ import ProductPerformance from '@/app/(DashboardLayout)/components/dashboard/Pro
 import CourseCard from '@/app/(DashboardLayout)/components/dashboard/Course';
 import Title from './components/titles/Title';
 import CoursesOverview from './components/QuickOptions/QuickOptions'
+import { useEffect, useState } from 'react';
 
 
 const Dashboard = () => {
+
+
   return (
     <PageContainer title="Dashboard" description="this is Dashboard">
     <Box mt={3}>

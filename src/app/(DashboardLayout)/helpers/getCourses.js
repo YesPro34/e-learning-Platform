@@ -9,7 +9,7 @@ export function getCourses(){
 
     const courses = [
         {
-          id: 1,
+          id: "PLSsAz5wf2lkK_ekd0J__44KG6QoXetZza",
           img: c1,
           title: "React.js",
           subtitle:
@@ -18,7 +18,7 @@ export function getCourses(){
           description: "React.js is a powerful and flexible JavaScript library for building user interfaces, particularly single-page applications where you need a fast and interactive user experience. It allows developers to create large web applications that can update and render efficiently in response to data changes."
         },
         {
-          id: 2,
+          id: "PLC3y8-rFHvwgC9mj0qv972IO5DmD-H0ZH",
           img: c2,
           title: "Next.js",
           subtitle:
@@ -27,7 +27,7 @@ export function getCourses(){
           description: "Next.js is a framework built on top of React that provides infrastructure and simple development experience for server-side rendered (SSR) applications. It also supports static site generation (SSG), making it an excellent choice for building fast, SEO-friendly websites."
         },
         {
-          id: 3,
+          id: "PL4cUxeGkcC9gpXORlEHjc5bgnIi5HEGhw",
           img: c3,
           title: "Tailwind CSS",
           subtitle:
@@ -36,7 +36,7 @@ export function getCourses(){
           description: "Tailwind CSS is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override. It encourages a utility-first approach, where you style your components using a set of predefined classes."
         },
         {
-          id: 4,
+          id: "PL0Zuz27SZ-6MexSAh5x1R3rU6Mg2zYBVr",
           img: c4,
           title: "Nest.js",
           subtitle:
@@ -45,7 +45,7 @@ export function getCourses(){
           description: "Nest.js is a framework for building efficient, scalable Node.js server-side applications. It uses progressive JavaScript, is built with and fully supports TypeScript, and combines elements of OOP (Object Oriented Programming), FP (Functional Programming), and FRP (Functional Reactive Programming)."
         },
         {
-          id: 5,
+          id: "PLp_RsiLZjwQQ7CxVhnM4G8i5veEClNPfX",
           img: c5,
           title: "ASP.NET",
           subtitle:
@@ -54,7 +54,7 @@ export function getCourses(){
           description: "ASP.NET is a free, cross-platform, open-source framework for building web applications and services with .NET and C#. It provides a robust, scalable, and high-performance framework for developing modern, cloud-based, internet-connected applications."
         },
         {
-          id: 6,
+          id: "PLsyeobzWxl7qbKoSgR5ub6jolI8-ocxCF",
           img: c6,
           title: "Spring Boot",
           subtitle:
