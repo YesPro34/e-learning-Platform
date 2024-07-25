@@ -110,7 +110,7 @@ export default function Playlist() {
                 {course.description}
               </Typography>
               <Box sx={{ display: "flex", gap: "15px" }}>
-                <CalendarTodayIcon color="primary" />
+                <CalendarTodayIcon color={course.btncolor} />
                 <Typography variant="h4">2024-07-20</Typography>
               </Box>
             </Grid>

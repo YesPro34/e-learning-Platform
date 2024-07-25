@@ -7,8 +7,7 @@ import Link from "next/link";
 import {getCourses} from "../../helpers/getCourses.js"
 
 
-const CourseCard = ({}) => {
-  const courses = getCourses()
+const CourseCard = ({courses}) => {
   return (
     <Grid container spacing={3}>
       {courses.map((course, index) => (

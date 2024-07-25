@@ -115,7 +115,7 @@ export default function VideoPage() {
                     <Typography variant="h5">YYYY-MM-DD</Typography>
                 </Box>
             </Box>
-            <Card sx={{paddingY:"25px", paddingX:"19px", marginTop:"10px"}}>
+            <Card sx={{paddingY:"25px", paddingX:"19px", marginTop:"10px", backgroundColor:"lightgray"}}>
                 <Typography  variant="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptate repellat minus et vitae repudiandae repellendus porro nihil adipisci. Officia!</Typography>
             </Card>
         </Box>
@@ -130,7 +130,7 @@ export default function VideoPage() {
                     <Typography variant="h5">YYYY-MM-DD</Typography>
                 </Box>
             </Box>
-            <Card sx={{paddingY:"25px", paddingX:"19px", marginTop:"10px"}}>
+            <Card sx={{paddingY:"25px", paddingX:"19px", marginTop:"10px", backgroundColor:"lightgray"}}>
                 <Typography  variant="p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptate repellat minus et vitae repudiandae repellendus porro nihil adipisci. Officia!</Typography>
             </Card>
         </Box>
