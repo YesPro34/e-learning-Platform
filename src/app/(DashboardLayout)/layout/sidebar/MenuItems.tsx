@@ -1,5 +1,13 @@
 import {
-  IconBoxMultiple, IconCircleDot, IconHome, IconInfoCircle, IconLayout, IconLayoutGrid, IconPhoto, IconPoint, IconStar, IconTable, IconUser
+  IconHome, IconLayoutGrid,  
+  IconServer,
+  IconDeviceDesktop,
+  IconDatabase,
+  IconDeviceMobile,
+  IconCode,
+  IconBrain,
+  IconSettingsAutomation,
+  IconChartBar
 } from "@tabler/icons-react";
 
 import { uniqueId } from "lodash";
@@ -13,45 +21,54 @@ const Menuitems = [
   },
   {
     id: uniqueId(),
-    title: "Buttons",
-    icon: IconCircleDot,
-    href: "/ui-components/buttons",
+    title: "Programming Languages",
+    icon: IconCode,
+    href: "/ui-components/programming-language",
   },
   {
     id: uniqueId(),
-    title: "Forms",
-    icon: IconTable,
-    href: "/ui-components/forms",
+    title: "Front End",
+    icon: IconDeviceDesktop,
+    href: "/ui-components/frontend",
   },
   {
     id: uniqueId(),
-    title: "Alerts",
-    icon: IconInfoCircle,
-    href: "/ui-components/alerts",
+    title: "Back End",
+    icon: IconServer,
+    href: "/ui-components/back-end",
   },
   {
     id: uniqueId(),
-    title: "Ratings",
-    icon: IconStar,
-    href: "/ui-components/ratings",
+    title: "Databases",
+    icon: IconDatabase,
+    href: "/ui-components/database",
   },
   {
     id: uniqueId(),
-    title: "Images",
-    icon: IconPhoto,
-    href: "/ui-components/images",
+    title: "Mobile Developement",
+    icon: IconDeviceMobile,
+    href: "/ui-components/mobile",
   },
+  ,
   {
     id: uniqueId(),
-    title: "Pagination",
-    icon: IconUser,
-    href: "/ui-components/pagination",
+    title: "AI",
+    icon: IconBrain,
+    href: "/ui-components/ai",
   },
+  ,
   {
     id: uniqueId(),
-    title: "Tables",
-    icon: IconLayoutGrid,
-    href: "/ui-components/table",
+    title: "Data Engineering",
+    icon: IconSettingsAutomation,
+    href: "/ui-components/data-engineering",
+  },
+  ,
+  {
+    id: uniqueId(),
+    title: "Buiseness Intelligence",
+    icon: IconChartBar,
+    href: "/ui-components/bi",
   },
 ];
 
